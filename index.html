@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="images/rain.gif">
+    <title>WeatherApp</title>
+</head>
+<body>
+    <div class="menubar">
+        <img src="images/rain.gif" alt="logo" class="logo">
+        <span class="name">Weather<span class="color-blue">App</span></span>
+        <a class="credit" id="credit-icon"><img src="images/icon-menu.svg" alt="open-credits" id="credit-image"></a>
+    </div>
+    <div class="dropdown" id="dropdown">
+        <p class="credit-text"><b>Weather<span class="color-blue">App</span></b> was made by</p>
+        <a href="https://www.github.com/notkshitijsingh" target="_blank" class="link">
+            <img src="images/github.png" alt="github-logo" class="github-logo">
+            <span class="username">notkshitijsingh</span>
+        </a>
+    </div>
+    <input class="searchbar" id="searchbar" placeholder="Search for your city or state">
+    <div class="under-searchbar">
+        <div class="temperature-container">
+            <p class="temperature" id="temperature">TEMP</p>
+            <p class="city" id="city">CITY</p>
+        </div>
+        <div class="right-pane">
+            <div class="humidity-container">
+                <img src="images/humidity.gif" alt="humidity-icon" class="humidity-icon" title="Humidity">
+                <span class="humidity" id="humidity">HUMIDITY</span>
+            </div><br><br><br>
+            <div class="wind-container">
+                <img src="images/wind.gif" alt="wind-icon" class="wind-icon" title="Wind Speed">
+                <span class="wind" id="wind">WIND</span>
+            </div>
+            <p class="desc" id="desc">WEATHER</p>
+        </div>
+        <a class="mode">
+            <img src="images/light-mode.png" alt="mode-icon" class="mode-icon" id="mode-icon" title="Switch to Dark Mode">
+        </a>
+        <div class="weather-img">
+            <img src="images/rain.gif" alt="weather-icon" id="weather-icon" class="weather-icon">
+        </div>
+    </div>
+    <div class="onload" id="onload">
+        <img src="images/rain.gif" alt="splash" class="splash">
+        <p class="splash-text">Enter a city or state to get started!</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
