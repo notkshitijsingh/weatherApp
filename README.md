@@ -8,4 +8,5 @@ This also comes with a dark mode for all the night owls ^_^
 # Screenshots
 ## Light Mode
 ![LtMd](screenshots/Light.png)
+## Dark Mode
 ![DkMd](screenshots/Dark.png)
