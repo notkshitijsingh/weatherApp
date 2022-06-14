@@ -12,6 +12,6 @@ This also comes with a dark mode for all the night owls ^_^
 ![DkMd](screenshots/Dark.png)
 
 # Pending
-1. ~~Mobile View~~
+1. ~~Mobile View~~ Added Mobile View on 14th June 2022
 2. (Possibly) Astrology
 3. (Possibly) 7-Day Weather Forecast
