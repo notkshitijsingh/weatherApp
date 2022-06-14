@@ -227,3 +227,75 @@ body {
     font-size: 24px;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .menubar {
+        padding: 5px 10px 5px 5px;
+        justify-content: space-between;
+    }
+    .menubar .logo {
+        height: 60px;
+        transform: translateY(10%);
+    }
+    .menubar .name{
+        font-size: 28px;
+        padding-left: 10px;
+    }
+    .searchbar {
+        margin: 5px;
+        width: calc(100% - 130px);
+    }
+    .temperature-container {
+        padding-left: 0px;
+        margin-top: 300px;
+        width: calc(100% - 10px);
+    }
+    .temperature-container .temperature {
+        font-size: 54px;
+        text-align: center;
+    }
+
+    .temperature-container .city{
+        margin-top:-50px;
+        text-align: center;
+    }
+    .dropdown {
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    .dropdown .link {
+        opacity: 1;
+    }
+    .weather-img {
+        padding: 5px;
+    }
+
+    .weather-img .weather-icon {
+        margin-left: 50px;
+        margin-top: 50px;
+        height: 300px;
+    }
+
+    .desc {
+        width: calc(100% - 20px);
+        margin-top: -23vh;
+        text-align: center;
+    }
+
+    .mode {
+        right: 0px;
+        padding-right: 10px;
+        margin-top: 78vh;
+    }
+
+    .right-pane {
+        margin-top: 600px;
+    }
+    .onload {
+        width: calc(100% - 10px);
+        height: 800px;
+    }
+    .onload .splash{
+        padding-top: 150px;
+    }
+}
