@@ -60,34 +60,41 @@ function fetchWeather(apiUrl){
 }
 
 function displayWeather(data){
-    const { name } = data;
-    const { icon, description } = data.weather[0];
-    const { temp, humidity } = data.main;
-    const { speed } = data.wind;
-    console.log(name,description,temp,humidity,speed);
-    document.getElementById("temperature").textContent = parseInt(temp)+"°C";
-    document.getElementById("city").textContent = name;
-    document.getElementById("humidity").textContent = humidity+"%";
-    document.getElementById("wind").textContent = speed+" km/h";
-    document.getElementById("desc").textContent = description;
-    searchbar.value="";
-    //icons
-   if (icon === "11d") {
-    document.getElementById("weather-icon").src = "images/weather-conditions/storm.gif";
-   } else if (icon === "09d") {
-    document.getElementById("weather-icon").src = "images/weather-conditions/drizzle.gif";
-   } else if (icon === "10d") {
-    document.getElementById("weather-icon").src = "images/weather-conditions/rain.gif";
-   } else if (icon === "50d") {
-    document.getElementById("weather-icon").src = "images/weather-conditions/foggy.gif";
-   } else if (icon === "01d") {
-    document.getElementById("weather-icon").src = "images/weather-conditions/cloudy.gif";
-   } else if (icon === "01n") {
-    document.getElementById("weather-icon").src = "images/weather-conditions/cloudy-night.gif";
-   } else if (icon === "13d") {
-    document.getElementById("weather-icon").src = "images/weather-conditions/snow.gif";
-   } else if (icon === "02d" || icon === "02n" || icon === "03n" || icon === "03d" || icon === "04d" || icon === "04n" ) {
-    document.getElementById("weather-icon").src = "images/weather-conditions/clouds.gif";
-   }
-   document.getElementById('onload').style.display = 'none';
+    try {
+        const { name } = data;
+        const { icon, description } = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { speed } = data.wind;
+        console.log(name,description,temp,humidity,speed);
+        document.getElementById("temperature").textContent = parseInt(temp)+"°C";
+        document.getElementById("city").textContent = name;
+        document.getElementById("humidity").textContent = humidity+"%";
+        document.getElementById("wind").textContent = speed+" km/h";
+        document.getElementById("desc").textContent = description;
+        searchbar.value="";
+        //icons
+    if (icon === "11d") {
+        document.getElementById("weather-icon").src = "images/weather-conditions/storm.gif";
+    } else if (icon === "09d") {
+        document.getElementById("weather-icon").src = "images/weather-conditions/drizzle.gif";
+    } else if (icon === "10d") {
+        document.getElementById("weather-icon").src = "images/weather-conditions/rain.gif";
+    } else if (icon === "50d") {
+        document.getElementById("weather-icon").src = "images/weather-conditions/foggy.gif";
+    } else if (icon === "01d") {
+        document.getElementById("weather-icon").src = "images/weather-conditions/cloudy.gif";
+    } else if (icon === "01n") {
+        document.getElementById("weather-icon").src = "images/weather-conditions/cloudy-night.gif";
+    } else if (icon === "13d") {
+        document.getElementById("weather-icon").src = "images/weather-conditions/snow.gif";
+    } else if (icon === "02d" || icon === "02n" || icon === "03n" || icon === "03d" || icon === "04d" || icon === "04n" ) {
+        document.getElementById("weather-icon").src = "images/weather-conditions/clouds.gif";
+    }
+    document.getElementById('onload').style.display = 'none';
+    }
+    catch(error) {
+        document.getElementById('onload').style.display = 'block';
+        var error_place = searchbar.value;
+        document.getElementById('splash-text').innerHTML = 'We could not find "'+error_place+'", try again with another place.';
+    }
 }
